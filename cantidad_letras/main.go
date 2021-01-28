@@ -24,14 +24,7 @@ func normalize(text string) string {
 func countLetters(text string) map[string]uint8 {
 	var letters = make(map[string]uint8)
 	for i := 0; i <= len(text)-1; i++ {
-		if letters[string(text[i])] >= 1 {
-			fmt.Println(letters[string(text[i])],string(text[i]))
-			letters[string(text[i])] += 1
-			fmt.Println(letters[string(text[i])],string(text[i]))
-		}
-		if letters[string(text[i])] == 0 {
-			letters[string(text[i])] = 1
-		}
+			letters[string(text[i])]++
 	}
 	return letters
 }
